@@ -1,0 +1,42 @@
+<h1>Edit this  Post!</h1>
+<!-- #first change -->
+
+ <%=  form_for  @blog  do |f|   %>
+
+          <div>
+            
+                  <%= f.label :title %>
+
+               
+                  <%= f.text_field :title %>
+
+          </div>
+
+          <div>
+            
+                  <%= f.label :date %>
+                  <%= f.text_field :date %>
+
+          </div>
+
+
+          <div>
+                  <%= f.label :post%>
+                  <%= f.text_field :post %>
+
+
+
+          </div>
+
+
+         
+            
+          
+
+          <%= f.submit "Submit these changes!"  %>
+
+        <!--  2nd change -->
+
+ <% end %>
+
+ <%= link_to "Back to the list!", blogs_path %>

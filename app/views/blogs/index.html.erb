@@ -1,0 +1,16 @@
+<h1>Today's Post</h1>
+
+
+<ul>
+  <% @blogs.each do |blog|  %>
+    <li>
+      <%=  blog.title  %>   -  <%=  blog.post  %><!-- #bean name refers to arbritrary name from line above    do |bean| it is just something you make up -->
+
+      <!-- we want to iterate through an array here (something like NG repeat in angular), conceptually we will do the same thing -->
+      <!-- erb stands for embedded ruby , basically we are writing ruby in an HTML file-->
+      <%= link_to "More info", blog_path(blog) %>  <!-- #using bean because we only want one bean, (bean) -->
+
+    </li>
+  <% end %>
+
+</ul>

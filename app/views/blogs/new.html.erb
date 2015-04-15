@@ -1,0 +1,42 @@
+<h1>Add a new blog!</h1>
+
+ <%=  form_for  @blog  do |f|   %>
+
+          <div>
+            
+                  <%= f.label :title %>
+
+               <!--      the value of the f.label will be :name -->
+                  <%= f.text_field :title %>
+
+          </div>
+
+          <div>
+          
+                  <%= f.label :date %>
+                  <%= f.text_field :date %>
+
+          </div>
+
+
+          <div>
+                  <%= f.label :post %>
+                  <%= f.text_field :post %>
+
+
+
+          </div>
+
+
+         
+            
+          <!--   next we need a way to submit the information       -->
+
+          <%= f.submit "Add new post!"  %>
+
+         <!--  next we need something to post the data so go back to the controller
+ -->
+
+ <% end %>
+
+ <%= link_to "Back to the list!", blogs_path %>
