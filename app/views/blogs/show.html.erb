@@ -1,4 +1,6 @@
-<h1><%= @blog.title %></h1>    <!-- using the equal sign because we want to see this info on our webpape -->
+<h1>Abe's Blog</h1>
+
+<h2><%= @blog.title %></h2>    <!-- using the equal sign because we want to see this info on our webpape -->
 <p> <%= @blog.post %> </p>
 
 <%= link_to "edit this post", edit_blog_path(@blog) %>
@@ -6,3 +8,43 @@
 <%= link_to "Delete this post!", :blog, method: :delete, data: { confirm: "Are you sure?"} %>
 
 <%= link_to "Back to the list!", blogs_path %>
+
+
+<section>
+         <h2>Comments</h2>
+
+         <% @blog.comments.each do |comment| %>
+
+
+         <div class="b">
+            <p><strong>Name:</strong> <%= comment.name %></p>
+            <p><strong>Date:</strong> <%= comment.date %></p>  
+            <p><strong>Comment:</strong> <%= comment.body %></p>
+         </div>
+
+         <% end %>
+</section>
+
+
+<section>
+         <h2>Add a comment!</h2>
+         <%= form_for [@blog, @comment] do |f| %>
+             
+          <div>
+                 <%= f.label :name %>
+                 <%= f.text_area :name %>
+</div>
+
+  <div>
+                 <%= f.label :date %>
+                 <%= f.text_area :date %>
+</div>
+
+             <div>
+                 <%= f.label :body, "comment" %>
+                 <%= f.text_area :body %>
+</div>
+             
+             <%= f.submit "Add your comment!" %>
+         <% end %>
+</section>
