@@ -45,3 +45,10 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'quiet_assets'
+
+gem 'carrierwave'
+
+gem 'rmagick'
+
+gem 'bcrypt'

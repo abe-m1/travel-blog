@@ -19,15 +19,40 @@
   @import "bootstrap";
 
 
+@mixin border-stuff($radius) {
+      border: 1px solid green;
+      -webkit-border-radius: $radius;
+      -moz-border-radius:    $radius;
+      -ms-border-radius:     $radius;
+       border-radius:    $radius;
+
+ }
+
+    .box {
+
+      @include border-stuff(10px);
+
+    }
 
 
-footer {
 
-  background-color: blue;
+.jumbotron {
+  background-image: url("title.jpg");
+
+}
+
+.col-lg-2 {
+  border: 1px solid black;
+  height:500px;
+  background-color: grey;
 }
 
 
-
+.col-lg-3 {
+  border: 1px solid black;
+  height:500px;
+ align: right;
+}
 
 
 

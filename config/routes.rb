@@ -22,6 +22,21 @@ Rails.application.routes.draw do
       post  "blogs/:id/comments" => "comments#create", as: :blog_comments
 
 
+     
+
+      get "users" => "users#index"
+
+    get "signup" => "users#new"
+
+    post "users" => "users#create" 
+
+    #routes for logging in/out
+
+    get "login" => "sessions#new"
+    post "login" => "sessions#create"
+    delete "logout" => "sessions#destroy"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

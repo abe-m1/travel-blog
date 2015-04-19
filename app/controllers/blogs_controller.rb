@@ -19,7 +19,7 @@ class BlogsController < ApplicationController
       def create
         
 
-            @blog = Blog.new(params.require(:blog).permit(:title, :date, :post))
+            @blog = Blog.new(params.require(:blog).permit(:title, :date, :post, :image))
        
               if @blog.save
                 redirect_to blogs_path

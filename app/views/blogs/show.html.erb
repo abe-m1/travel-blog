@@ -1,13 +1,18 @@
 <h1>Abe's Blog</h1>
 
+<%= image_tag(@blog.image, size: '100x100') %>
+
 <h2><%= @blog.title %></h2>    <!-- using the equal sign because we want to see this info on our webpape -->
 <p> <%= @blog.post %> </p>
 
-<%= link_to "edit this post", edit_blog_path(@blog) %>
-
-<%= link_to "Delete this post!", :blog, method: :delete, data: { confirm: "Are you sure?"} %>
-
-<%= link_to "Back to the list!", blogs_path %>
+<% if current_user %>
+    <%= link_to "edit this post", edit_blog_path(@blog) %>
+    <br>
+    <%= link_to "Delete this post!", :blog, method: :delete, data: { confirm: "Are you sure?"} %>
+    <br>
+    <%= link_to "Back to the list!", blogs_path %>
+<% else %>
+<% end %>
 
 
 <section>
@@ -17,6 +22,7 @@
 
 
          <div class="b">
+
             <p><strong>Name:</strong> <%= comment.name %></p>
             <p><strong>Date:</strong> <%= comment.date %></p>  
             <p><strong>Comment:</strong> <%= comment.body %></p>
@@ -32,12 +38,12 @@
              
           <div>
                  <%= f.label :name %>
-                 <%= f.text_area :name %>
+                 <%= f.text_field :name %>
 </div>
 
   <div>
                  <%= f.label :date %>
-                 <%= f.text_area :date %>
+                 <%= f.text_field :date %>
 </div>
 
              <div>
@@ -48,3 +54,5 @@
              <%= f.submit "Add your comment!" %>
          <% end %>
 </section>
+
+<%= link_to "Back to the list!", blogs_path %>
