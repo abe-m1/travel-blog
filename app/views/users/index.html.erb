@@ -23,7 +23,7 @@
 
 <%= link_to 'Log Out', logout_path, method: :delete %>
 
-
+<%= link_to "new post", new_blog_path %>
 
 <% if logged_in? %>
   Logged in as: <%= current_user.name %> <%= link_to 'Log Out', logout_path, method: :delete %>
