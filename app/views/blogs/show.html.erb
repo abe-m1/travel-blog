@@ -20,6 +20,7 @@
     <%= link_to "Delete this post!", :blog, method: :delete, data: { confirm: "Are you sure?"} %>
     <br>
     <%= link_to "Back to the list!", blogs_path %>
+    <%= link_to "new post", new_blog_path %>
 <% else %>
 <% end %>
 
