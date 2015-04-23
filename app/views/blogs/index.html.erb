@@ -1,63 +1,56 @@
+
+
 <div class="jumbotron">
     <h1>Abe's Travel Blog</h1>
     <p class="lead">This will eventually be an interesting blog</p>
-    
+</div>
+
+ <div class="container">
+  <div class="row">
+
+    <div class="col-lg-1"></div>
+
+    <div class="col-lg-8 box">
+
+      <% @blogs.each do |blog|  %>
+            <div class="blog-post">
+                 <div  class="photo"> <%= image_tag blog.image ,size: '800x600' %> </div>
+                 <div class="title">
+                  <h3 > <%=  blog.title  %> </h3>  
+                  
+                  <h4 class ="description"> <%=  blog.description  %> </h4><!-- #bean name refers to arbritrary name from line above    do |bean| it is just something you make up -->
+
+                  <!-- we want to iterate through an array here (something like NG repeat in angular), conceptually we will do the same thing -->
+                  <!-- erb stands for embedded ruby , basically we are writing ruby in an HTML file-->
+                  <%= link_to "Read More", blog_path(blog) %>  <!-- #using bean because we only want one bean, (bean) -->
+                </div>
+            </div>
+      <% end %>  
+
+    </div>
+
+
+
+
+     <div class="col-lg-2  ">
+      <h2>Recent posts</h2>
+
+      <%=form_tag(blogs_path, {method: "get"}) do %>
+          <%= text_field_tag(:q) %>
+           <%= submit_tag("Search") %>
+      <% end %>
+
+      <ul>
+        <% @blogs.each do |blog|  %>
+          <li>
+           <%= link_to blog.title, blog_path(blog) %> 
+          </li>
+        <% end %>
+      </ul>
+
+     </div>
   </div>
-
-  </div>
-
-  <%= link_to "sign up", signup_path %>
-<button type="button" class="btn btn-default">Sign Up</button>
- <% if logged_in? %>
-  Logged in as: <%= current_user.name %> <%= link_to 'Log Out', logout_path, method: :delete %>
-<% else %>
-  <%= link_to 'Log In', login_path %>
-<% end %> 
-
-
-<div class="col-lg-2">
-
-
-</div>
-
-
- <div class="col-lg-6 box">
-<ul>
-  <% @blogs.each do |blog|  %>
-    <li>
-      <%= image_tag blog.image_url(:thumb) %>
-      <h2> <%=  blog.title  %> </h2>  -  <%=  blog.post  %><!-- #bean name refers to arbritrary name from line above    do |bean| it is just something you make up -->
-
-      <!-- we want to iterate through an array here (something like NG repeat in angular), conceptually we will do the same thing -->
-      <!-- erb stands for embedded ruby , basically we are writing ruby in an HTML file-->
-      <%= link_to "Read More", blog_path(blog) %>  <!-- #using bean because we only want one bean, (bean) -->
-
-    </li>
-  <% end %>
-
-</ul>
-
-
-</div>
-
- <div class="col-lg-3 ">
-<h2>Recent posts</h2>
-<ul>
-  <% @blogs.each do |blog|  %>
-    <li>
-      <h2> <%= link_to blog.title, blog_path(blog) %> 
-</li>
-  <% end %>
-
-</ul>
-
- </div>
-
-
-<footer class="footer">
-          <p>&copy; Company 2014</p>
-        </footer>
-</div>
+</div> 
 
  
 

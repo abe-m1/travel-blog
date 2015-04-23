@@ -1,0 +1,26 @@
+<div class="navbar">
+
+<div id="menu">
+
+  
+  <ul >
+    <li  class= "menu_item"> <%= link_to "Home", blogs_path %></li>
+    <li><%= link_to "Photo Gallery", photos_path %></li>
+    <li><%= link_to "Map", map_path %></li>
+    <li><%= link_to "Contact", contact_path %></li>
+
+
+  
+
+
+<li class="login"><%= link_to "sign up", signup_path , class: "btn btn-primary" %>
+
+ <% if logged_in? %>
+ <%= link_to 'Log Out', logout_path, method: :delete %>   Logged in as:<%= current_user.name %> 
+<% else %>
+  <%= link_to 'Log In', login_path, class: "btn btn-primary" %>
+<% end %> </li>
+</ul>
+
+</div>
+</div>

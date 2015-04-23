@@ -2,7 +2,11 @@ class BlogsController < ApplicationController
 
 
     def   index
-        @blogs= Blog.all  
+      if params[:q]
+          @blogs =Blog.where('name like ?' , '%' + params[:q] +'%')
+        
+        end
+        @blogs= Blog.last(3)  
     end
 
       def show
@@ -19,7 +23,7 @@ class BlogsController < ApplicationController
       def create
         
 
-            @blog = Blog.new(params.require(:blog).permit(:title, :date, :post, :image))
+            @blog = Blog.new(params.require(:blog).permit(:title, :date, :post, :image, :description))
        
               if @blog.save
                 redirect_to blogs_path
@@ -41,7 +45,7 @@ class BlogsController < ApplicationController
         
               @blog =Blog.find(params[:id])
 
-              if @blog.update_attributes(params.require(:blog).permit(:title, :date, :post))
+              if @blog.update_attributes(params.require(:blog).permit(:title, :date, :post, :description))
                     redirect_to blogs_path
               else
                   render:edit
@@ -55,7 +59,6 @@ class BlogsController < ApplicationController
         redirect_to blogs_path
       end
 end  
-
 
 
 

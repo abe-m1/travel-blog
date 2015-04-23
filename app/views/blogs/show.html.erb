@@ -1,9 +1,18 @@
-<h1>Abe's Blog</h1>
+<div class="showcontainer">
+<h1><strong><%= @blog.title %></strong></h1>
 
-<%= image_tag(@blog.image, size: '100x100') %>
 
+  <div class="test1">  <%= image_tag(@blog.image, size: '400x300') %>  
+<br> <%= image_tag(@blog.image, size: '400x300') %>  
+  </div>
+
+
+
+<div class="mainpost1">
 <h2><%= @blog.title %></h2>    <!-- using the equal sign because we want to see this info on our webpape -->
-<p> <%= @blog.post %> </p>
+<p class="wrapper"> 
+<span class="image"><%= image_tag(@blog.image, size: '200x200') %>  </span>
+<%= @blog.post %> </p>
 
 <% if current_user %>
     <%= link_to "edit this post", edit_blog_path(@blog) %>
@@ -14,7 +23,11 @@
 <% else %>
 <% end %>
 
+</div>
 
+
+
+<div class="comment">
 <section>
          <h2>Comments</h2>
 
@@ -54,5 +67,7 @@
              <%= f.submit "Add your comment!" %>
          <% end %>
 </section>
-
+</div>
 <%= link_to "Back to the list!", blogs_path %>
+
+</div>
