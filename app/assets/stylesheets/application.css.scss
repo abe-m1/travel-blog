@@ -25,6 +25,11 @@
 
  }
 
+
+
+.body {
+  background-color: #5C63AD;
+}
 .navbar {
   margin: 0;
 }
@@ -50,17 +55,18 @@ navbutton {
 }
 
 .jumbotron {
-  background-color: grey;
+  background-color: #6E778F;
 
 }
 
-.container  {
-  margin: 0;
+
+
+
+
+.row {
+  width: 100%;
 }
 
-.body {
-  margin: 0;
-}
 
 
 
@@ -72,14 +78,8 @@ navbutton {
 
 
 
-.container {
-  background-color: grey;
-}
 
-.row {
-  background-color: black;
 
-}
 
 
 
@@ -96,11 +96,15 @@ navbutton {
 }
 
 .box {
-  border: 1px solid red;  
-  background-color: black;
+  border: 1px solid white;  
+  background-color: #7F89FF;
 
 }
 
+
+body {
+background-color: #5C63AD;  
+}
 
 
 .blog-post {
@@ -111,6 +115,7 @@ navbutton {
   margin: 20px;
   overflow: hidden;
   height: 500px;
+  
 }
 
 
@@ -124,7 +129,13 @@ navbutton {
   opacity: 0.7;
 }
 
-
+.recent {
+  border: 3px solid white;
+float: right;
+padding: 10px;
+background-color: #7F89FF;
+ 
+}
 
 
 
@@ -132,7 +143,7 @@ navbutton {
 
 
 .photo {
-  border:2px solid green;
+  
   position: relative;
 
   
@@ -180,7 +191,7 @@ navbutton {
   width: 800px;
   margin-left:50px;
   padding: 10px;
-  background-color: grey;
+  background-color: #B9B8FF;
   font-family: verdana, helvetica, serif;
 
 }

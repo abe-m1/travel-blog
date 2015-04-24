@@ -5,7 +5,7 @@
     <p class="lead">This will eventually be an interesting blog</p>
 </div>
 
- <div class="container">
+ 
   <div class="row">
 
     <div class="col-lg-1"></div>
@@ -32,7 +32,8 @@
 
 
 
-     <div class="col-lg-2  ">
+     <div class="col-lg-3">
+     <div class="recent">
       <h2>Recent posts</h2>
 
       <%=form_tag(blogs_path, {method: "get"}) do %>
@@ -47,10 +48,14 @@
           </li>
         <% end %>
       </ul>
-
+      </div>
      </div>
   </div>
-</div> 
+
+
+
+     </div>
+
 
  
 
