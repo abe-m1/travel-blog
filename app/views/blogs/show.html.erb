@@ -11,7 +11,7 @@
 <div class="mainpost1">
 <h2><%= @blog.title %></h2>    <!-- using the equal sign because we want to see this info on our webpape -->
 <p class="wrapper"> 
-<span class="image"><%= image_tag(@blog.image, size: '200x200') %>  </span>
+<div class="image"><%= image_tag(@blog.image, size: '200x200') %>  </div>
 <%= @blog.post %> </p>
 
 <% if current_user %>
