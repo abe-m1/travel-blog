@@ -28,7 +28,7 @@
 
 
 .body {
-  background-color: #5C63AD;
+  background-color: white;
 }
 .navbar {
   margin: 0;
@@ -36,11 +36,13 @@
 
 .navbar {
   margin-top: 0px;
-  background-color: black;
+  
   color: white;
-  opacity: 0.3;
-  position:fixed;
+  opacity: 0.7;
+  position:relative;
   width: 100%;
+  background-image: url("https://s3-us-west-1.amazonaws.com/abetravelblog/jumbotron1.jpg");
+  background-size: cover;
 }
 
 navbutton {
@@ -122,14 +124,14 @@ a {
 }
 
 .box {
-  border: 1px solid white;  
-  background-color: #7F89FF;
+  border: 1px #AFAFAF;  
+  background-color: #868787;
 
 }
 
 
 body {
-background-color: #5C63AD;  
+background-color: #B2B4B7;  
 }
 
 
@@ -137,7 +139,7 @@ background-color: #5C63AD;
 
   position: relative;
   
-  border: 8px solid white;
+  border: 5px solid white;
   margin: 20px;
   overflow: hidden;
   height: 500px;
@@ -159,7 +161,7 @@ background-color: #5C63AD;
   border: 3px solid white;
 float: right;
 padding: 10px;
-background-color: #7F89FF;
+background-color: #868787;
  
 }
 
@@ -184,7 +186,7 @@ background-color: #7F89FF;
 #carousel-example-generic {
   width :800px;
   margin: 0 auto;
-  border: 10px solid white;
+  border: 5px solid white;
 
 }
 
@@ -195,7 +197,7 @@ background-color: #7F89FF;
 
 
 .photocontainer {
-  background-color: grey;
+  background-color: #B2B4B7;
   height: 700px;
 }
 
@@ -299,6 +301,6 @@ height: 100%;
 }
 
 .showcontainer {
-  background-color: gray;
+  background-color: #B2B4B7;
 }
 
