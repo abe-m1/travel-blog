@@ -7,7 +7,7 @@
   </div> -->
 
 
-
+<div class="container">
 <div class="mainpost1">
 <h2><%= @blog.title %></h2>    <!-- using the equal sign because we want to see this info on our webpape -->
 <p class="wrapper"> 
@@ -26,6 +26,15 @@
 
 </div>
 
+<div class="sidecolumn">
+
+    
+
+<div class="sketch1"><img style="height:200px; width:300px;" src="https://s3-us-west-1.amazonaws.com/abetravelblog/sketch1.jpg"></div><br>
+<div class="sketch2"><img style="height:200px; width:300px;" src="https://s3-us-west-1.amazonaws.com/abetravelblog/picture12.jpg"></div><br>
+<div class="sketch3"><img style="height:200px; width:300px;" src="https://s3-us-west-1.amazonaws.com/abetravelblog/picture12.jpg"></div><br>
+<div class="sketch4"><img style="height:200px; width:300px;" src="https://s3-us-west-1.amazonaws.com/abetravelblog/picture12.jpg"></div>
+</div>
 
 
 
@@ -36,7 +45,7 @@
          <% @blog.comments.each do |comment| %>
 
 
-         <div class="b">
+         <div class="onecomment">
 
             <p><strong>Name:</strong> <%= comment.name %></p>
             <p><strong>Date:</strong> <%= comment.date %></p>  
@@ -48,7 +57,7 @@
 
 
 <section>
-         <h2>Add a comment!</h2>
+         <h4>Add a comment!</h4>
          <%= form_for [@blog, @comment] do |f| %>
              
           <div>
