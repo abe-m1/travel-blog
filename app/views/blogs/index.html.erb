@@ -14,7 +14,9 @@
 
       <% @blogs.each do |blog|  %>
             <div class="blog-post">
-                 <div  class="photo"> <%= image_tag blog.image ,size: '800x600' %> </div>
+                  <div  class="photo"> <%= image_tag blog.image ,size: '800x600' %> </div>
+
+
                  <div class="title">
                   <h3 > <%=  blog.title  %> </h3>  
                   
