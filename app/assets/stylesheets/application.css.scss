@@ -148,6 +148,18 @@ background-size: cover;
 
 }
 
+.mysketches {
+  color:white;
+  padding: 10px;
+}
+
+.sketchdescription {
+  color: white;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+
 
 .title { 
   position: absolute; 
@@ -304,5 +316,13 @@ height: 100%;
 
 .showcontainer {
   background-color: #B2B4B7;
+}
+
+.aboutme {
+  border: 1px solid white;
+  width: 50%;
+  margin: 0 auto;
+  height: 100px;
+  padding: 10px;
 }
 
